@@ -4,6 +4,12 @@ const client = new Discord.Client()
 const fs = require("fs")
 const config = require("./config.json")
 
+const server_port = process.env.YOUR_PORT || process.env.PORT || 60;
+const server_host = process.env.YOUR_HOST || '0.0.0.0';
+server.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
+});
+
 client.config = require("./config.json")
 client.distube = new DisTube(client, { searchSongs: true, emitNewSongOnly: true, leaveOnFinish: true })
 client.commands = new Discord.Collection()
