@@ -21,6 +21,7 @@
     "discord.js": "^12.4.1",
     "distube": "^2.6.8",
     "ffmpeg": "0.0.4",
-    "ffmpeg-static": "^4.2.7"
+    "ffmpeg-static": "^4.2.7",
+    "express": "^4.17.1"
   }
 }
