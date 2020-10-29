@@ -3,13 +3,13 @@ const Discord = require("discord.js")
 const client = new Discord.Client()
 const fs = require("fs")
 const config = require("./config.json")
-const app = require("express")
+const http = require('http');
+const express = require('express');
+const app = express();
 
 const server_port = process.env.YOUR_PORT || process.env.PORT || 60;
 const server_host = process.env.YOUR_HOST || '0.0.0.0';
 
-const http = require('http');
-const app = express();
 app.get("/", (request, response) => {
   console.log(Date.now() + " Ping Received");
   response.sendStatus(200);
