@@ -7,9 +7,17 @@ const app = require("express")
 
 const server_port = process.env.YOUR_PORT || process.env.PORT || 60;
 const server_host = process.env.YOUR_HOST || '0.0.0.0';
-app.listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
+
+const http = require('http');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
 });
+app.listen(server_port);
+setInterval(() => {
+  http.get(`http://ten-music-autoplay.herokuapp.com/`);
+}, 280000);
 
 client.config = require("./config.json")
 client.distube = new DisTube(client, { searchSongs: true, emitNewSongOnly: true, leaveOnFinish: true })
