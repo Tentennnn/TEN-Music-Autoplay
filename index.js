@@ -43,7 +43,7 @@ client.on("ready", () => {
 })
 
 client.on('message', async message => {
-    let prefix = config.prefix
+    let prefix = process.env.prefix
     if (!message.content.startsWith(prefix)) return
     const args = message.content.slice(prefix.length).trim().split(/ +/g)
     const command = args.shift().toLowerCase();
@@ -82,4 +82,4 @@ client.distube
     .on("searchCancel", (message) => message.channel.send(`${client.emotes.error} | Searching canceled`))
     .on("error", (message, err) => message.channel.send(`${client.emotes.error} | An error encountered: ${err}`));
 
-client.login(config.token)
+client.login(process.env.token)
