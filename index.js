@@ -43,9 +43,8 @@ client.on("ready", () => {
 })
 
 client.on('message', async message => {
-    let prefix = process.env.prefix
-    if (!message.content.startsWith(prefix)) return
-    const args = message.content.slice(prefix.length).trim().split(/ +/g)
+    if (!message.content.startsWith(config.prefix)) return
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g)
     const command = args.shift().toLowerCase();
     let cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command))
     if (!cmd) return
@@ -82,4 +81,4 @@ client.distube
     .on("searchCancel", (message) => message.channel.send(`${client.emotes.error} | Searching canceled`))
     .on("error", (message, err) => message.channel.send(`${client.emotes.error} | An error encountered: ${err}`));
 
-client.login(process.env.token)
+client.login("NzAyODI4OTU2MjU2MTc0MDkw.XqFueQ.niFDkN_UxUO1qRfZDk2JWnzLgXQ")

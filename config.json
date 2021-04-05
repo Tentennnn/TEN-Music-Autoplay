@@ -1,6 +1,6 @@
 {
     "prefix": "ap!",
-    "token": "NzAyODI4OTU2MjU2MTc0MDkw.XqFueQ.Sw-bu2rVx-1Mygi2ymKFpW48QMo",
+    "token": "NzAyODI4OTU2MjU2MTc0MDkw.XqFueQ.niFDkN_UxUO1qRfZDk2JWnzLgXQ",
     "emoji": {
         "play": "▶️",
         "stop": "⏹️",
@@ -8,5 +8,6 @@
         "success": "☑️",
         "repeat": "🔁",
         "error": "❌"
-    }
+    },
+    "altcode": "¦"
 }
