@@ -81,4 +81,4 @@ client.distube
     .on("searchCancel", (message) => message.channel.send(`${client.emotes.error} | Searching canceled`))
     .on("error", (message, err) => message.channel.send(`${client.emotes.error} | An error encountered: ${err}`));
 
-client.login("NzAyODI4OTU2MjU2MTc0MDkw.XqFueQ.niFDkN_UxUO1qRfZDk2JWnzLgXQ")
+client.login(process.env.token)
