@@ -3,21 +3,6 @@ const Discord = require("discord.js")
 const client = new Discord.Client()
 const fs = require("fs")
 const config = require("./config.json")
-const http = require('http');
-const express = require('express');
-const app = express();
-
-const server_port = process.env.YOUR_PORT || process.env.PORT || 60;
-const server_host = process.env.YOUR_HOST || '0.0.0.0';
-
-app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping Received");
-  response.sendStatus(200);
-});
-app.listen(server_port);
-setInterval(() => {
-  http.get(`http://ten-music-autoplay.herokuapp.com/`);
-}, 280000);
 
 client.config = require("./config.json")
 client.distube = new DisTube(client, { searchSongs: true, emitNewSongOnly: true, leaveOnFinish: true })
@@ -81,4 +66,4 @@ client.distube
     .on("searchCancel", (message) => message.channel.send(`${client.emotes.error} | Searching canceled`))
     .on("error", (message, err) => message.channel.send(`${client.emotes.error} | An error encountered: ${err}`));
 
-client.login(process.env.token)
+client.login(config.token)
