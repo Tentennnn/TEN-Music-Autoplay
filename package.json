@@ -1,21 +1,21 @@
 {
-  "name": "distube-example",
+  "name": "Ten Music 24/7",
   "version": "1.0.0",
-  "description": "DisTube example music bot.",
+  "description": "DisTube Example Music bot.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/skick1234/DisTube-Example.git"
+    "url": "git+ssh://git@github.com/Tentennnn/TEN-Music-Autoplay.git"
   },
-  "author": "Skick",
+  "author": "Tenten",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/skick1234/DisTube-Example/issues"
+    "url": "https://github.com/Tentennnn/TEN-Music-Autoplay/issues"
   },
-  "homepage": "https://github.com/skick1234/DisTube-Example#readme",
+  "homepage": "https://github.com/Tentennnn/TEN-Music-Autoplay#readme",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "discord.js": "^12.4.1",
