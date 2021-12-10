@@ -28,8 +28,8 @@ client.on("ready", () => {
 })
 
 client.on('message', async message => {
-    if (!message.content.startsWith(process.env.prefix)) return
-    const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g)
+    if (!message.content.startsWith(config.prefix)) return
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g)
     const command = args.shift().toLowerCase();
     let cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command))
     if (!cmd) return
